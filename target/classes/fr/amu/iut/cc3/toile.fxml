@@ -13,18 +13,20 @@
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
-        <Circle fx:id="com1Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+        <Circle fx:id="com1Circle" centerX="200.0" centerY="200.0" fill="#000000" mouseTransparent="true" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
         <Circle fx:id="com2Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
         <Circle fx:id="com3Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
         <Circle fx:id="com4Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
         <Circle fx:id="com5Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
         <Circle fx:id="com6Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
 
-
         <Group layoutX="195.0" layoutY="195.0">
             <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix" />
             <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix" />
+
         </Group>
+        <Line fx:id="line1" endX="200" endY="400.0" startX="200.0" startY="0" visible="false" />
+
         <Line endX="200" endY="400.0" startX="200.0" startY="0" styleClass="toile" />
         <Line endX="200.0" endY="400.0" rotate="60.0" startX="200.0" styleClass="toile" />
         <Line endX="200.0" endY="400.0" rotate="120.0" startX="200.0" styleClass="toile" />
@@ -104,12 +106,12 @@
                   </font></Label>
                <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
                   <children>
-                     <Button mnemonicParsing="false" text="Tracer">
+                     <Button mnemonicParsing="false" onAction="#ClickTracer" text="Tracer">
                         <HBox.margin>
                            <Insets bottom="20.0" right="10.0" />
                         </HBox.margin>
                      </Button>
-                     <Button mnemonicParsing="false" text="Vider" onAction="#ClickVider">
+                     <Button mnemonicParsing="false" onAction="#ClickVider" text="Vider">
                         <opaqueInsets>
                            <Insets />
                         </opaqueInsets>

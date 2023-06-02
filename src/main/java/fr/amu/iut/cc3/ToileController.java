@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -61,6 +62,11 @@ public class ToileController implements Initializable {
     private Label err1 = new Label();
     @FXML
     private Label err2 = new Label();
+    @FXML
+    private Line line1 = new Line();
+
+    private int com1CircleCenterX;
+
     @FXML
     private void ActionTextField() {
         int com1Int = Integer.parseInt(com1.getText());
@@ -134,6 +140,17 @@ public class ToileController implements Initializable {
         com6.setText("");
         err1.setVisible(false);
         err2.setVisible(false);
+    }
+
+    @FXML
+    private void ClickTracer(){
+        Circle [] TabPoint = {com1Circle, com2Circle, com3Circle, com4Circle, com5Circle, com6Circle};
+        for(int i = 0; i<4; ++i){
+            //line1.setStartX(TabPoint[i+1].getCenterX());
+            //line1.setStartY(TabPoint[i].getCenterY());
+            //line1.setEndX(TabPoint[i].getCenterX());
+            //line1.setEndY(TabPoint[i].getCenterY());
+        }
     }
 
     @Override
