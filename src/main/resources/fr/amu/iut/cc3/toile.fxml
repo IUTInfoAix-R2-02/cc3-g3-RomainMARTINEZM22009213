@@ -13,12 +13,13 @@
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
-        <Circle fx:id="com1Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
-        <Circle fx:id="com2Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
-        <Circle fx:id="com3Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
-        <Circle fx:id="com4Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
-        <Circle fx:id="com5Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
-        <Circle fx:id="com6Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+        <Circle fx:id="com1Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+        <Circle fx:id="com2Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+        <Circle fx:id="com3Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+        <Circle fx:id="com4Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+        <Circle fx:id="com5Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+        <Circle fx:id="com6Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="false" />
+
 
         <Group layoutX="195.0" layoutY="195.0">
             <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix" />
@@ -39,28 +40,8 @@
       </HBox.margin>
     </Pane>
    <BorderPane prefHeight="200.0" prefWidth="200.0">
-      <bottom>
-         <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="TOP_RIGHT">
-            <children>
-               <Button mnemonicParsing="false" text="Tracer">
-                  <HBox.margin>
-                     <Insets bottom="20.0" right="10.0" />
-                  </HBox.margin></Button>
-               <Button mnemonicParsing="false" text="Vider" onAction="#ClickVider">
-                  <opaqueInsets>
-                     <Insets />
-                  </opaqueInsets>
-                  <HBox.margin>
-                     <Insets bottom="20.0" left="10.0" />
-                  </HBox.margin></Button>
-            </children>
-            <BorderPane.margin>
-               <Insets />
-            </BorderPane.margin>
-         </HBox>
-      </bottom>
       <top>
-         <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
       </top>
       <center>
          <GridPane BorderPane.alignment="CENTER">
@@ -109,5 +90,42 @@
                <TextField fx:id="com6" onAction="#ActionTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             </children>
          </GridPane>
-      </center></BorderPane>
+      </center>
+      <bottom>
+         <VBox alignment="BOTTOM_LEFT" minHeight="11.0" minWidth="10.0" prefHeight="130.0" prefWidth="10.0" BorderPane.alignment="BOTTOM_CENTER">
+            <children>
+               <Label fx:id="err1" text="Erreur de saisie :" textFill="RED" visible="false">
+                  <font>
+                     <Font size="11.0" />
+                  </font></Label>
+                <Label fx:id="err2" text="Les valeurs doivent être entre 0 et 20" textFill="RED" visible="false">
+                  <font>
+                     <Font size="10.5" />
+                  </font></Label>
+               <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Button mnemonicParsing="false" text="Tracer">
+                        <HBox.margin>
+                           <Insets bottom="20.0" right="10.0" />
+                        </HBox.margin>
+                     </Button>
+                     <Button mnemonicParsing="false" text="Vider" onAction="#ClickVider">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                        <HBox.margin>
+                           <Insets bottom="20.0" left="10.0" />
+                        </HBox.margin>
+                     </Button>
+                  </children>
+               </HBox>
+            </children>
+            <BorderPane.margin>
+               <Insets />
+            </BorderPane.margin>
+            <padding>
+               <Insets top="30.0" />
+            </padding>
+         </VBox>
+      </bottom></BorderPane>
 </HBox>

@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -19,6 +20,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -56,6 +58,10 @@ public class ToileController implements Initializable {
     @FXML
     private Circle com6Circle = new Circle();
     @FXML
+    private Label err1 = new Label();
+    @FXML
+    private Label err2 = new Label();
+    @FXML
     private void ActionTextField() {
         int com1Int = Integer.parseInt(com1.getText());
         if (com1Int >= 0 && com1Int <= 20) {
@@ -63,35 +69,59 @@ public class ToileController implements Initializable {
             com1Circle.setCenterY(getYRadarChart(com1Int, 1));
             com1Circle.setVisible(true);
         }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
         int com2Int = Integer.parseInt(com2.getText());
         if (com2Int >= 0 && com2Int <= 20) {
             com2Circle.setCenterX(getXRadarChart(com1Int, 2));
             com2Circle.setCenterY(getYRadarChart(com1Int, 2));
             com2Circle.setVisible(true);
         }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
         int com3Int = Integer.parseInt(com3.getText());
-        if (com3Int >= 0 && com2Int <= 20) {
+        if (com3Int >= 0 && com3Int <= 20) {
             com3Circle.setCenterX(getXRadarChart(com3Int, 3));
             com3Circle.setCenterY(getYRadarChart(com3Int, 3));
             com3Circle.setVisible(true);
         }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
         int com4Int = Integer.parseInt(com4.getText());
-        if (com4Int >= 0 && com2Int <= 20) {
+        if (com4Int >= 0 && com4Int <= 20) {
             com4Circle.setCenterX(getXRadarChart(com4Int, 4));
             com4Circle.setCenterY(getYRadarChart(com4Int, 4));
             com4Circle.setVisible(true);
         }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
         int com5Int = Integer.parseInt(com5.getText());
-        if (com5Int >= 0 && com2Int <= 20) {
+        if (com5Int >= 0 && com5Int <= 20) {
             com5Circle.setCenterX(getXRadarChart(com5Int, 5));
             com5Circle.setCenterY(getYRadarChart(com5Int, 5));
             com5Circle.setVisible(true);
         }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
         int com6Int = Integer.parseInt(com6.getText());
-        if (com5Int >= 0 && com2Int <= 20) {
+        if (com6Int >= 0 && com6Int <= 20) {
             com6Circle.setCenterX(getXRadarChart(com6Int, 6));
             com6Circle.setCenterY(getYRadarChart(com6Int, 6));
             com6Circle.setVisible(true);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
         }
     }
     @FXML
@@ -102,6 +132,8 @@ public class ToileController implements Initializable {
         com4.setText("");
         com5.setText("");
         com6.setText("");
+        err1.setVisible(false);
+        err2.setVisible(false);
     }
 
     @Override
