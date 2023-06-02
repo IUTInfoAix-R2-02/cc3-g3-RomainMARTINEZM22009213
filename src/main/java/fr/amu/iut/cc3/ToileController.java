@@ -38,21 +38,70 @@ public class ToileController implements Initializable {
     @FXML
     private TextField com2 = new TextField();
     @FXML
+    private Circle com2Circle = new Circle();
+    @FXML
     private TextField com3 = new TextField();
+    @FXML
+    private Circle com3Circle = new Circle();
     @FXML
     private TextField com4 = new TextField();
     @FXML
+    private Circle com4Circle = new Circle();
+    @FXML
     private TextField com5 = new TextField();
+    @FXML
+    private Circle com5Circle = new Circle();
     @FXML
     private TextField com6 = new TextField();
     @FXML
-    private void ClickTracer(){
+    private Circle com6Circle = new Circle();
+    @FXML
+    private void ActionTextField() {
         int com1Int = Integer.parseInt(com1.getText());
-        if(com1Int >= 0 && com1Int <=20){
-            com1Circle.setCenterX(getXRadarChart(0, com1Int));
-            com1Circle.setCenterY(getYRadarChart(20, com1Int));
-            //com1Circle.set
+        if (com1Int >= 0 && com1Int <= 20) {
+            com1Circle.setCenterX(getXRadarChart(com1Int, 1));
+            com1Circle.setCenterY(getYRadarChart(com1Int, 1));
+            com1Circle.setVisible(true);
         }
+        int com2Int = Integer.parseInt(com2.getText());
+        if (com2Int >= 0 && com2Int <= 20) {
+            com2Circle.setCenterX(getXRadarChart(com1Int, 2));
+            com2Circle.setCenterY(getYRadarChart(com1Int, 2));
+            com2Circle.setVisible(true);
+        }
+        int com3Int = Integer.parseInt(com3.getText());
+        if (com3Int >= 0 && com2Int <= 20) {
+            com3Circle.setCenterX(getXRadarChart(com3Int, 3));
+            com3Circle.setCenterY(getYRadarChart(com3Int, 3));
+            com3Circle.setVisible(true);
+        }
+        int com4Int = Integer.parseInt(com4.getText());
+        if (com4Int >= 0 && com2Int <= 20) {
+            com4Circle.setCenterX(getXRadarChart(com4Int, 4));
+            com4Circle.setCenterY(getYRadarChart(com4Int, 4));
+            com4Circle.setVisible(true);
+        }
+        int com5Int = Integer.parseInt(com5.getText());
+        if (com5Int >= 0 && com2Int <= 20) {
+            com5Circle.setCenterX(getXRadarChart(com5Int, 5));
+            com5Circle.setCenterY(getYRadarChart(com5Int, 5));
+            com5Circle.setVisible(true);
+        }
+        int com6Int = Integer.parseInt(com6.getText());
+        if (com5Int >= 0 && com2Int <= 20) {
+            com6Circle.setCenterX(getXRadarChart(com6Int, 6));
+            com6Circle.setCenterY(getYRadarChart(com6Int, 6));
+            com6Circle.setVisible(true);
+        }
+    }
+    @FXML
+    private void ClickVider(){
+        com1.setText("");
+        com2.setText("");
+        com3.setText("");
+        com4.setText("");
+        com5.setText("");
+        com6.setText("");
     }
 
     @Override

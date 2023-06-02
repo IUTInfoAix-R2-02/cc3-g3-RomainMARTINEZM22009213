@@ -13,7 +13,13 @@
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
-        <Circle fx:id="com1Circle" centerX="200" centerY="200.0" fill="#000000" radius="5.0" />
+        <Circle fx:id="com1Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+        <Circle fx:id="com2Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+        <Circle fx:id="com3Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+        <Circle fx:id="com4Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+        <Circle fx:id="com5Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+        <Circle fx:id="com6Circle" centerX="200.0" centerY="200.0" fill="#000000" radius="5.0" visible="no"/>
+
         <Group layoutX="195.0" layoutY="195.0">
             <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix" />
             <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix" />
@@ -40,7 +46,7 @@
                   <HBox.margin>
                      <Insets bottom="20.0" right="10.0" />
                   </HBox.margin></Button>
-               <Button mnemonicParsing="false" text="Vider">
+               <Button mnemonicParsing="false" text="Vider" onAction="#ClickVider">
                   <opaqueInsets>
                      <Insets />
                   </opaqueInsets>
@@ -79,9 +85,9 @@
                   <font>
                      <Font size="11.0" />
                   </font></Label>
-               <TextField fx:id="com1" onAction="#ClickTracer" GridPane.columnIndex="1" />
-               <TextField fx:id="com2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <TextField fx:id="com3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <TextField fx:id="com1" onAction="#ActionTextField" GridPane.columnIndex="1" />
+               <TextField fx:id="com2" onAction="#ActionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <TextField fx:id="com3" onAction="#ActionTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                <Label text="Compétence 3 - Administrer" GridPane.rowIndex="2">
                   <font>
                      <Font size="11.0" />
@@ -98,9 +104,9 @@
                   <font>
                      <Font size="11.0" />
                   </font></Label>
-               <TextField fx:id="com4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-               <TextField fx:id="com5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-               <TextField fx:id="com6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <TextField fx:id="com4" onAction="#ActionTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <TextField fx:id="com5" onAction="#ActionTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               <TextField fx:id="com6" onAction="#ActionTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             </children>
          </GridPane>
       </center></BorderPane>
