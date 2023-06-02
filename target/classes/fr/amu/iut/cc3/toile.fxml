@@ -7,12 +7,13 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" styleClass="croix" style="-fx-background-color: #9dd7fa" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController">
+<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" style="-fx-background-color: #9dd7fa" styleClass="croix" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController">
     <Pane prefHeight="400.0" prefWidth="400.0">
         <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
+        <Circle fx:id="com1Circle" centerX="200" centerY="200.0" fill="#000000" radius="5.0" />
         <Group layoutX="195.0" layoutY="195.0">
             <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix" />
             <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix" />
@@ -78,7 +79,7 @@
                   <font>
                      <Font size="11.0" />
                   </font></Label>
-               <TextField fx:id="com1" GridPane.columnIndex="1" />
+               <TextField fx:id="com1" onAction="#ClickTracer" GridPane.columnIndex="1" />
                <TextField fx:id="com2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <TextField fx:id="com3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                <Label text="Compétence 3 - Administrer" GridPane.rowIndex="2">

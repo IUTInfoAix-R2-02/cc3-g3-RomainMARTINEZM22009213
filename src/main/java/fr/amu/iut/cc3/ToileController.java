@@ -17,6 +17,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
 import java.net.URL;
@@ -30,7 +31,29 @@ public class ToileController implements Initializable {
     private static int angleEnDegre = 60;
     private static int angleDepart = 90;
     private static int noteMaximale = 20;
-
+    @FXML
+    private TextField com1 = new TextField();
+    @FXML
+    private Circle com1Circle = new Circle();
+    @FXML
+    private TextField com2 = new TextField();
+    @FXML
+    private TextField com3 = new TextField();
+    @FXML
+    private TextField com4 = new TextField();
+    @FXML
+    private TextField com5 = new TextField();
+    @FXML
+    private TextField com6 = new TextField();
+    @FXML
+    private void ClickTracer(){
+        int com1Int = Integer.parseInt(com1.getText());
+        if(com1Int >= 0 && com1Int <=20){
+            com1Circle.setCenterX(getXRadarChart(0, com1Int));
+            com1Circle.setCenterY(getYRadarChart(20, com1Int));
+            //com1Circle.set
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
